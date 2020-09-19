@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://shaders/sky_and_clouds/noise.png" type="Texture" id=1]
+[ext_resource path="res://shaders/sky_and_clouds/Clouds.shader" type="Shader" id=2]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/WIND = Vector3( 0, 0, -0.1 )
+shader_param/SUN_POS = Vector3( -0.707107, -0.676172, 0.206862 )
+shader_param/SIZE = 2.0
+shader_param/SOFTNESS = 1.0
+shader_param/COVERAGE = 0.48861
+shader_param/HEIGHT = 0.35
+shader_param/THICKNESS = 15.877
+shader_param/ABSORPTION = 1.3377
+shader_param/STEPS = 20
+shader_param/Noise = ExtResource( 1 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/thunder.ogg-15dd75236decdf3b3ee45d45e1df668f.oggstr"
+
+[deps]
+
+source_file="res://shaders/sky_and_clouds/thunder.ogg"
+dest_files=[ "res://.import/thunder.ogg-15dd75236decdf3b3ee45d45e1df668f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

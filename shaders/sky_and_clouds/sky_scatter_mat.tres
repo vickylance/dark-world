@@ -1,0 +1,33 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=2]
+
+[ext_resource path="res://shaders/sky_and_clouds/lightning.png" type="Texture" id=1]
+[ext_resource path="res://shaders/sky_and_clouds/Moon_1k.png" type="Texture" id=2]
+[ext_resource path="res://shaders/sky_and_clouds/Sky_with_scaterring.shader" type="Shader" id=3]
+
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("clouds_viewport")
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/SUN_POS = Vector3( 0.707107, 0.676172, -0.206862 )
+shader_param/MOON_POS = Vector3( 0, -0.956251, 0.292547 )
+shader_param/MOON_TEX_POS = Vector3( 0, -0.989002, 0.1479 )
+shader_param/MOON_PHASE = -1.0
+shader_param/moon_radius = 0.2048
+shader_param/sun_radius = 0.04
+shader_param/attenuation = 1.0
+shader_param/LIGHTING_STRENGTH = Vector3( 0, 0, 0 )
+shader_param/LIGHTTING_POS = Vector3( 0, 0.707107, 0.707107 )
+shader_param/sky_tone = 3.0
+shader_param/sky_density = 0.75
+shader_param/sky_rayleig_coeff = 1.0
+shader_param/sky_mie_coeff = 2.0
+shader_param/multiScatterPhase = 0.1
+shader_param/anisotropicIntensity = 0.0
+shader_param/color_sky = Color( 1, 0.51, 0.235, 1 )
+shader_param/moon_tint = Color( 1, 0.7, 0.35, 1 )
+shader_param/clouds_tint = Color( 1, 0.23, 0.13, 1 )
+shader_param/MOON = ExtResource( 2 )
+shader_param/cloud_env_texture = SubResource( 1 )
+shader_param/lighting_texture = ExtResource( 1 )

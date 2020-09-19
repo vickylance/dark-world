@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 20, 20, 20 )
+flag_align_y = true
+tangential_accel = 6.0
+tangential_accel_random = 1.0
+scale = 2.0
+scale_random = 1.0
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+flags_unshaded = true
+flags_no_depth_test = true
+flags_do_not_receive_shadows = true
+flags_disable_ambient_light = true
+params_cull_mode = 2
+params_billboard_mode = 2
+uv1_scale = Vector3( 1, -1, 1 )
+
+[sub_resource type="QuadMesh" id=3]
+material = SubResource( 2 )
+size = Vector2( 0.02, 0.5 )
+
+[node name="Rain" type="Spatial"]
+
+[node name="WaterDroplets" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32.8554, 0 )
+amount = 20000
+lifetime = 2.0
+speed_scale = 3.0
+visibility_aabb = AABB( -48, -69.1157, -44, 96, 88, 88 )
+process_material = SubResource( 1 )
+draw_pass_1 = SubResource( 3 )
